@@ -35,8 +35,10 @@ export const useApiStore = defineStore('api', () => {
 
       isLoading.value = true;
 
-      await fetchStarredStatus(card);
-      await fetchRepoInformation(card);
+      await Promise.all([
+        fetchStarredStatus(card),
+        fetchRepoInformation(card)
+      ])
 
       isLoading.value = false;
   }

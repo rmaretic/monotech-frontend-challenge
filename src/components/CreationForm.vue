@@ -197,6 +197,9 @@ import LinkIcon from './icons/LinkIcon.vue';
 import TwitterIcon from './icons/TwitterIcon.vue';
 import OpenLinkIcon from './icons/OpenLinkIcon.vue';
 
+import { useApiStore } from '@/store/api';
+import { storeToRefs } from 'pinia';
+
 const username = ref('');
 const repo = ref('');
 const color = ref("rgb(40,203,164)");
@@ -227,7 +230,8 @@ const reset = () => {
   error.value = null;
 }
 
-const link = ref('')
+const apiStore = useApiStore();
+const { link } = storeToRefs(apiStore);
 
 const isFormValid = computed(() =>{
   return username.value && repo.value && icon.value
@@ -238,6 +242,12 @@ const submit = () => {
     error.value = 'Please fill in all fields before submitting';
     return;
   }
+  apiStore.saveCard({
+    username: username.value,
+    repo: repo.value,
+    color: color.value,
+    icon: icon.value
+  })
 }
 </script>
 <style>

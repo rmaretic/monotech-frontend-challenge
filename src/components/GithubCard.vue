@@ -86,6 +86,9 @@ watch(currentCard, (newVal) => {
     }
 })
 
+const toggleStar = () => {
+    apiStore.toggleRepoStar();
+}
 </script>
 <style scoped>
 .header-container {

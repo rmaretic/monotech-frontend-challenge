@@ -84,11 +84,36 @@ export const useApiStore = defineStore('api', () => {
       }
     }
 
+    const toggleRepoStar = async () => {
+      try {
+        if (currentCard.value?.isStared) {
+          // Unstar the repository
+          await octokit.request('DELETE /user/starred/{owner}/{repo}', {
+            owner: currentCard.value.username,
+            repo: currentCard.value.repo
+          })
+          currentCard.value.stars--
+          currentCard.value.isStared = false;
+        } else {
+          // Star the repository
+          await octokit.request('PUT /user/starred/{owner}/{repo}', {
+            owner: currentCard.value.username,
+            repo: currentCard.value.repo
+          })
+          currentCard.value.stars++
+          currentCard.value.isStared = true;
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
     return {
         currentCard,
         link,
         isLoading,
         saveCard,
-        getCard
+        getCard,
+        toggleRepoStar
     }
 })

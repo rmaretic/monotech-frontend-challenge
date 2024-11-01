@@ -176,5 +176,95 @@ const setIcon = (selection: string) => {
 }
 </script>
 <style>
+h1 {
+    font-weight: 600;
+}
+.card {
+  border: 1px solid #E6E6E6;
+  background: #F9F9F9;
+  padding: 2rem;
+  border-radius: 9px;
+  width: 515px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.section-title {
+    font-size: 18px;
+}
+.vc-color-wrap {
+    width: 96px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    border-radius: 9px 0 0 9px;
+}
+.current-color {
+    width: 96px !important;
+    height: 40px !important;
+    border-radius: 9px 0 0 9px;
+}
+.text-input {
+  border: none;
+  height: 40px;
+  border-radius: 9px;
+  background: white;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 43%;
+  box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.1);
+  font-size: 15px;
+  font-weight: 500;
+}
+.color-text {
+    background-color: white;
+    width: 140px;
+    height: 40px;
+    border-radius: 0 9px 9px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.1);
+}
 
+::placeholder {
+  color: #C4C4C4;
+}
+
+.text-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.1);
+}
+
+.icon-selector-container {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+}
+.icons-section {
+    margin-top: 1rem;
+}
+.icon-button {
+  border: 1px solid #E6E6E6;
+  background: #F9F9F9;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+  cursor: pointer;
+}
 </style>

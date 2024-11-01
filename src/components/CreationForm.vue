@@ -135,6 +135,37 @@
             </div>
           </div>
         </div>
+
+        <!-- Bottom section -->
+        <div class="buttons-container">
+          <template v-if="link">
+            <button @click="shareTwitter" class="twitter-button">
+              <TwitterIcon />
+              Tweet Your Link
+            </button>
+            <button @click="reset" class="reset-button">
+              <LinkIcon />
+              Reset form
+            </button>
+            <button class="generate-link-button" @click="openLink">
+              <OpenLinkIcon />
+              Open
+            </button>
+          </template>
+
+          <template v-else>
+            <div class="error">
+              {{ error }}
+            </div>
+            <button class="generate-link-button" @click="submit">
+              <LinkIcon />
+              Generate Link
+            </button>
+          </template>
+        </div>
+        <div v-if="link" class="link-container">
+          {{ link }}
+        </div>
     </div>
 </template>
 <script setup lang="ts">
@@ -171,8 +202,42 @@ const repo = ref('');
 const color = ref("rgb(40,203,164)");
 const icon = ref<string|null>(null);
 
+const error = ref<string|null>(null);
+
 const setIcon = (selection: string) => {
   icon.value = selection;
+}
+
+const shareTwitter = () => {
+  const url = `https://twitter.com/intent/tweet?url=${link.value}`;
+  window.open(url, "_blank")
+}
+
+const openLink = () => {
+  const url = `${link.value}`;
+  window.open(url, "_blank")
+}
+
+const reset = () => {
+  link.value = null;
+  username.value = '';
+  repo.value = '';
+  color.value = "rgb(40,203,164)";
+  icon.value = null;
+  error.value = null;
+}
+
+const link = ref('')
+
+const isFormValid = computed(() =>{
+  return username.value && repo.value && icon.value
+})
+
+const submit = () => {
+  if (!isFormValid.value) {
+    error.value = 'Please fill in all fields before submitting';
+    return;
+  }
 }
 </script>
 <style>

@@ -1,0 +1,21 @@
+.flex {
+    display: flex;
+  }
+  .gap-1 {
+      gap: 1rem;
+  }
+  .p-2 {
+    padding: 2rem;
+  }
+  .gap-05 {
+      gap: 0.5rem
+  }
+  .wrap {
+    flex-wrap: wrap;
+  }
+  .space-between {
+    justify-content: space-between;
+  }
+  .align-center {
+    align-items: center;
+  }

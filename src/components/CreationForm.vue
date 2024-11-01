@@ -19,6 +19,121 @@
                 </div>
             </div>
           </div>
+
+          <!-- Icons -->
+          <div class="icons-section">
+            <span class="section-title">Select Icon:</span>
+            <div class="icon-selector-container">
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'PeopleMan12'}"
+                  @click="setIcon('PeopleMan12')">
+                  <PeopleMan12 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'PeopleManCap2'}"
+                  @click="setIcon('PeopleManCap2')">
+                  <PeopleManCap2 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'PeopleManBeard2'}"
+                  @click="setIcon('PeopleManBeard2')">
+                  <PeopleManBeard2 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'ProfessionsManChef3'}"
+                  @click="setIcon('ProfessionsManChef3')">
+                  <ProfessionsManChef3 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'ProfessionsManDoctor1'}"
+                  @click="setIcon('ProfessionsManDoctor1')">
+                  <ProfessionsManDoctor1 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'ProfessionsManMagician'}"
+                  @click="setIcon('ProfessionsManMagician')">
+                  <ProfessionsManMagician />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'FamousPeopleManMerlin2'}"
+                  @click="setIcon('FamousPeopleManMerlin2')">
+                  <FamousPeopleManMerlin2 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'ReligionManChristian1'}"
+                  @click="setIcon('ReligionManChristian1')">
+                  <ReligionManChristian1 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'CrimeManThief1'}"
+                  @click="setIcon('CrimeManThief1')">
+                  <CrimeManThief1 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'PeopleWoman1'}"
+                  @click="setIcon('PeopleWoman1')">
+                  <PeopleWoman1 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'PeopleWoman4'}"
+                  @click="setIcon('PeopleWoman4')">
+                  <PeopleWoman4 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'PeopleWoman13'}"
+                  @click="setIcon('PeopleWoman13')">
+                  <PeopleWoman13 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'OldPeopleWoman1'}"
+                  @click="setIcon('OldPeopleWoman1')">
+                  <OldPeopleWoman1 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'PeopleWomanGlasses5'}"
+                  @click="setIcon('PeopleWomanGlasses5')">
+                  <PeopleWomanGlasses5 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'PeopleWomanGlasses6'}"
+                  @click="setIcon('PeopleWomanGlasses6')">
+                  <PeopleWomanGlasses6 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'ReligionWomanMuslim'}"
+                  @click="setIcon('ReligionWomanMuslim')">
+                  <ReligionWomanMuslim />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'PeopleWoman8'}"
+                  @click="setIcon('PeopleWoman8')">
+                  <PeopleWoman8 />
+                </button>
+                <button
+                  class="icon-button"
+                  :class="{'is-selected': icon === 'CrimeWomanThief'}"
+                  @click="setIcon('CrimeWomanThief')">
+                  <CrimeWomanThief />
+                </button>
+            </div>
+          </div>
         </div>
     </div>
 </template>
@@ -28,9 +143,37 @@ import { computed, ref } from 'vue';
 import { ColorPicker } from "vue3-colorpicker";
 import "vue3-colorpicker/style.css";
 
+/* Icons */
+import CrimeManThief1 from '@/components/icons/CrimeManThief1.vue';
+import CrimeWomanThief from '@/components/icons/CrimeWomanThief.vue';
+import FamousPeopleManMerlin2 from '@/components/icons/FamousPeopleManMerlin2.vue';
+import OldPeopleWoman1 from '@/components/icons/OldPeopleWoman1.vue';
+import PeopleMan12 from '@/components/icons/PeopleMan12.vue';
+import PeopleManBeard2 from '@/components/icons/PeopleManBeard2.vue';
+import PeopleManCap2 from '@/components/icons/PeopleManCap2.vue';
+import PeopleWoman1 from '@/components/icons/PeopleWoman1.vue';
+import PeopleWoman4 from '@/components/icons/PeopleWoman4.vue';
+import PeopleWoman13 from '@/components/icons/PeopleWoman13.vue';
+import PeopleWomanGlasses5 from '@/components/icons/PeopleWomanGlasses5.vue';
+import PeopleWomanGlasses6 from '@/components/icons/PeopleWomanGlasses6.vue';
+import ProfessionsManChef3 from '@/components/icons/ProfessionsManChef3.vue';
+import ProfessionsManDoctor1 from '@/components/icons/ProfessionsManDoctor1.vue';
+import ProfessionsManMagician from '@/components/icons/ProfessionsManMagician.vue';
+import ReligionManChristian1 from '@/components/icons/ReligionManChristian1.vue';
+import PeopleWoman8 from '@/components/icons/PeopleWoman8.vue';
+import ReligionWomanMuslim from '@/components/icons/ReligionWomanMuslim.vue';
+import LinkIcon from './icons/LinkIcon.vue';
+import TwitterIcon from './icons/TwitterIcon.vue';
+import OpenLinkIcon from './icons/OpenLinkIcon.vue';
+
 const username = ref('');
 const repo = ref('');
 const color = ref("rgb(40,203,164)");
+const icon = ref<string|null>(null);
+
+const setIcon = (selection: string) => {
+  icon.value = selection;
+}
 </script>
 <style>
 

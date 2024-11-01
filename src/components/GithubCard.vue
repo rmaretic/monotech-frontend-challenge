@@ -132,4 +132,90 @@ watch(currentCard, (newVal) => {
     align-items: center;
     box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.1);
 }
+.card-body {
+    padding: 3rem 2rem 2rem;
+}
+.bold-username {
+    font-weight: 700;
+    color: black
+}
+.card-description {
+    height: 45px;
+    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.1);
+    border-radius: 9px;
+    background: white;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+.rating-container {
+    display: flex;
+    justify-content: flex-end;
+    height: 35px;
+    margin: 1rem 0 0;
+}
+.rating {
+    background-color: white;
+    border-radius: 9px;
+    overflow: hidden;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.1);
+}
+.star {
+    background: #FECF58;
+    border-radius: 9px;
+    color: white;
+    height: 35px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 17px;
+}
+.number-of-stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.contributors-container h3 {
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 1rem;
+}
+.contributors {
+    background-color: white;
+    border-radius: 9px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.single-contributor {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    border-bottom: 1px solid #EEEEEE;
+}
+.single-contributor:nth-child(odd) {
+    border-right: 1px solid #EEEEEE;
+} 
+.contributor-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.contributor-username {
+    font-weight: 600;
+    font-size: 16px;
+}
+.commit-number {
+    font-size: 13px;
+    font-weight: 400;
+}
 </style>

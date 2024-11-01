@@ -110,6 +110,12 @@ const toggleStar = () => {
 .card {
     padding: 0;
     overflow: hidden;
+    border: 1px solid #E6E6E6;
+    background: #F9F9F9;
+    border-radius: 9px;
+    width: 515px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .avatar {
     height: 77px;

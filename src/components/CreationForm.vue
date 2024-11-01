@@ -332,4 +332,73 @@ h1 {
   border-radius: 9px;
   cursor: pointer;
 }
+.icon-button:hover, .icon-button.is-selected {
+    background: #d5d5d5;
+}
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+.generate-link-button {
+  height: 45px;
+  padding: 0 1rem;
+  border-radius: 9px;
+  background: #D998E3;
+  color: white;
+  border: 0;
+  font-weight: 600;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.twitter-button {
+  height: 45px;
+  padding: 0 1rem;
+  border-radius: 9px;
+  background: #70CBFF;
+  color: white;
+  border: 0;
+  font-weight: 600;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.reset-button {
+  height: 45px;
+  padding: 0 1rem;
+  border-radius: 9px;
+  background: #818181;
+  color: white;
+  border: 0;
+  font-weight: 600;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.link-container {
+  background: #F1F1F1;
+  width: 100%;
+  height: 45px;
+  margin-top: 1rem;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  width: 515px;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.error {
+  color: red;
+  font-weight: 500;
+}
 </style>

@@ -64,11 +64,15 @@
             </div>
         </div>
     </div>
+    <InvalidRepoCard  v-else-if="!currentCard && !isLoading" />
 </template>
 <script setup>
 import { computed, defineAsyncComponent, watch } from 'vue';
 import { useApiStore } from '@/store/api';
 import { storeToRefs } from 'pinia';
+import FilledStarIcon from './icons/FilledStarIcon.vue';
+import EmptyStarIcon from './icons/EmptyStarIcon.vue';
+import InvalidRepoCard from './InvalidRepoCard.vue';
 
 const apiStore = useApiStore();
 const { currentCard, isLoading } = storeToRefs(apiStore);

@@ -39,7 +39,7 @@ export const useApiStore = defineStore('api', () => {
         fetchStarredStatus(card),
         fetchRepoInformation(card)
       ])
-
+      currentCard.value = card;
       isLoading.value = false;
   }
 
@@ -80,7 +80,6 @@ export const useApiStore = defineStore('api', () => {
           avatarUrl: c.avatar_url
         }))
 
-        currentCard.value = card;
       } catch (e) {
         console.error(e);
       }
